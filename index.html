@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Daniel y Joseca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gif {
+            width: 200px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Daniel y Joseca</h1>
+    <nav>
+        <a href="#daniel">Baloncesto (Daniel)</a>
+        <a href="#joseca">Fútbol (Joseca)</a>
+        <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Bienvenidos a nuestra web</h2>
+    <img src="Diseño sin título.png" alt="Imagen de portada">
+    <p>Somos Daniel y Joseca. En esta página compartimos nuestros hobbies: baloncesto y fútbol, además de algo de música.</p>
+    <a href="#daniel" class="button">Ir a la sección de Daniel</a>
+    <a href="#joseca" class="button">Ir a la sección de Joseca</a>
+</section>
+
+<section id="daniel">
+    <h2>Daniel - Baloncesto</h2>
+    <p>Me encanta jugar al baloncesto. Aquí tienes una imagen representativa:</p>
+    <img src="dep_0002.jpg" alt="Daniel jugando baloncesto">
+</section>
+
+<section id="joseca">
+    <h2>Joseca - Fútbol</h2>
+    <p>Mi pasión es el fútbol. Esta imagen muestra la emoción del deporte:</p>
+    <img src="MINIBLOGS-6.png" alt="Joseca jugando fútbol">
+    <p>Y aquí una canción que nos gusta:</p>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+</section>
+
+<section>
+    <h2>Multimedia adicional</h2>
+    <p>Mira este vídeo que nos gusta:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BxgeSv88c2w" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <p>Y aquí un gif animado divertido:</p>
+    <img src="https://media.giphy.com/media/3o7qE1YN7aBOFPRw8E/giphy.gif" class="gif" alt="Gif animado">
+</section>
+
+<footer>
+    <p>© 2025 Daniel y Joseca</p>
+    <p>Visitas: <span id="visitas">0</span></p>
+</footer>
+
+<script>
+    // Contador de visitas simple (solo local, para ejemplo)
+    if (localStorage.visitas) {
+        localStorage.visitas = Number(localStorage.visitas) + 1;
+    } else {
+        localStorage.visitas = 1;
+    }
+    document.getElementById('visitas').innerText = localStorage.visitas;
+</script>
+
+</body>
+</html>
